@@ -3,6 +3,7 @@ const bodyParse = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
 const { fetchBlogData, updateBlogPost } = require('./utils');
 const { connectToDB } = require('./database');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 3001;
 connectToDB();
 
 // general middleware
+app.use(cors());
 app.use(bodyParse.json()); // we need this to parse incoming json requests
 app.use(express.static('public'));
 
