@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./new-blog.js" defer></script>
+  <title>Create New Blog Post</title>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="new-blog.html">Create Post</a>
+  </nav>
+  <form class="new-blog-post-container">
+    <div class="new-blog-input">
+      <label for="title">Blog Title</label>
+      <input type="text" id="title" name="title" placeholder="Title">
+    </div>
+    <div class="new-blog-input">
+      <label for="author">Blog Author</label>
+      <input type="text" id="author" name="author" placeholder="Author">
+    </div>
+    <div class="new-blog-input">
+      <label for="content">Blog Content</label>
+      <textarea type="text" id="content" name="content" placeholder="What do you want to write?" cols="20" rows="40"></textarea>
+    </div>
+    <div class="blog-function-btns">
+      <button type="submit" id="create-blog-post-btn">Create</button>
+      <button class="delete-blog-btn">Delete</button>
+    </div>
+  </form>
+</body>
+</html>
